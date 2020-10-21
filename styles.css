@@ -315,7 +315,7 @@ nav {
     height: 100vh;
     /* background-color: var(--main-font-color-dark); */
     /* background-color: black; */
-    background: url("fav_painting.jpg") center no-repeat;
+    background: url("images/fav_painting.jpg") center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
