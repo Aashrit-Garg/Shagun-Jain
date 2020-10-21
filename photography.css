@@ -1,0 +1,204 @@
+/* Angled Images */
+
+body {
+  /* background-color: #000; */
+  align-items: center;
+  justify-content: center;
+}
+
+#angled {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    position: relative; }
+    #angled:after {
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: fixed;
+      z-index: 100;
+      pointer-events: none; }
+
+.angle {
+    cursor: pointer;
+    width: 100%;
+    height: 1000px;
+    margin-bottom: -400px;
+    padding: 0;
+    background-color: #000;
+    background-size: cover, auto;
+    background-attachment: fixed;
+    background-position: center center;
+    clip-path: polygon(50% 25%, 100% 0%, 100% 50%, 50% 75%, 0% 100%, 0% 50%);
+    transition: all .7s ease-in-out;
+    background-blend-mode: lighten; 
+  }
+    .angle.first {
+      clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 75%, 0% 100%, 0% 0%); }
+    .angle.last {
+      clip-path: polygon(50% 25%, 100% 0%, 100% 100%, 50% 100%, 0% 100%, 0% 50%); }
+  
+  .arrow {
+    clip-path: polygon(50% 25%, 100% 50%, 100% 100%, 50% 75%, 0% 100%, 0% 50%); }
+    .arrow.first {
+      clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 75%, 0% 100%, 0% 0%); }
+    .arrow.last {
+      clip-path: polygon(50% 25%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%); }
+  
+  .one {
+    background-image: url("./edit3.jpg"); }
+  
+  .two {
+    background-image: url("./DSC_7078_1.jpg"); }
+  
+  .three {
+    background-image: url("./DSC_7059.JPG"); }
+  
+  .four {
+    background-image: url("./DSC_7081_1.JPG"); }
+  
+  .five {
+    background-image: url("./DSC_7028.JPG"); }
+  
+  .six {
+    background-image: url("./DSC_7076.jpg"); }
+
+
+.angled-images {
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10000;
+  transition: 0.25s ease-out;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.full-img {
+  position: absolute;
+  height: 90vh;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: all 0.25s ease-out;
+}
+
+.full-img.open {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 30px;
+  margin-top: 15px; }
+  .container .thumbex {
+    margin: 10px 20px 30px;
+    width: 100%;
+    min-width: 250px;
+    max-width: 435px;
+    height: 300px;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow: hidden;
+    outline: 2px solid white;
+    outline-offset: -15px;
+    box-shadow: 5px 10px 40px 5px rgba(0, 0, 0, 0.5); }
+    .container .thumbex .thumbnail {
+      overflow: hidden;
+      min-width: 250px;
+      height: 300px;
+      position: relative;
+      opacity: 0.9;
+      backface-visibility: hidden;
+      transition: all 0.4s ease-out; }
+      .container .thumbex .thumbnail img {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 50%;
+        height: 115%;
+        width: auto;
+        transform: translate(-50%, -50%);
+        backface-visibility: hidden; }
+      .container .thumbex .thumbnail span {
+        position: absolute;
+        z-index: 2;
+        top: calc(150px - 20px);
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 50px;
+        margin: 0 45px;
+        text-align: center;
+        font-size: 24px;
+        color: white;
+        font-weight: 300;
+        font-family: "Raleway", sans-serif;
+        letter-spacing: 0.2px;
+        transition: all 0.3s ease-out; }
+      .container .thumbex .thumbnail:hover {
+        backface-visibility: hidden;
+        transform: scale(1.1, 1.1);
+        opacity: 1; }
+        .container .thumbex .thumbnail:hover span {
+          opacity: 0; }
+
+.title {
+  margin: 50px auto;
+}
+
+/* Make the container relative */
+.swap-on-hover {
+  position: relative;	
+	margin:  0 auto;
+	max-width: 400px;
+}
+
+/* Select the image and make it absolute to the container */
+.swap-on-hover img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+	overflow: hidden;
+	width: 750px;
+  height: 500px;
+  border-radius: 2.5rem;
+}
+
+/* 
+	We set z-index to be higher than the back image, so it's alwyas on the front.
+
+We give it an opacity leaner to .25s, that way when we hover we will get a nice fading effect. 
+*/
+.swap-on-hover .swap-on-hover__front-image {
+  z-index: 9999;
+  transition: opacity 1s linear;
+  cursor: pointer;
+}
+
+/* When we hover the figure element, the block with .swap-on-hover, we want to use > so the front-image is going to have opacity of 0, which means it will be hidden, to the back image will show */
+.swap-on-hover:hover > .swap-on-hover__front-image{
+  opacity: 0;
+}

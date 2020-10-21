@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero-container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 90vh; 
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+  line-height: 0;
+  outline: 2px solid black;
+}
+
+.box > a > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: .5s; }
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  color: black;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  height: 10vh;
+  line-height: 2.6; }
+
+.box:hover {
+  flex: 1 1 50%; }
+
+.box:hover > a > img {
+  width: 100%;
+  height: 100%; }
+
+.drawing-series {
+    background-color: white;
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 6;
+    transition: 0.25s ease-out;
+}
+
+.modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.full-img {
+    position: absolute;
+    height: 90vh;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.25s ease-out;
+}
+
+.full-img.open {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1150px;
+    /* position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); */
+}
+
+.four-images {
+    /* max-width: 900px; */
+}
+
+div.gallery ul {
+	list-style-type: none;
+	margin-left: 35px;
+}
+
+/* animation */
+div.gallery ul li, div.gallery li img {
+	-webkit-transition: all 0.1s ease-in-out;
+  	-moz-transition: all 0.1s ease-in-out;
+  	-o-transition: all 0.1s ease-in-out;
+  	transition: all 0.1s ease-in-out;
+}
+
+div.gallery ul li {
+	position: relative;
+	float: left;
+	width: 200px;
+	height: 200px;
+	margin: 5px;
+	padding: 5px;
+    z-index: 0;
+}
+
+/* Make sure z-index is higher on hover */
+/* Ensure that hover image overlapped the others */
+div.gallery ul li:hover {
+	z-index: 5;
+}
+
+/* Image is position nicely under li */
+div.gallery ul li img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	/* border: 1px solid black; */
+	/* padding: 5px; */
+	width: 200px;
+	height: 200px;
+	background: black;
+	object-fit: cover;
+}
+
+div.gallery ul li img:hover {
+	width: 270px;
+	height: 270px;
+	margin-top: -200px;
+	margin-left: -200px;
+	top: 75%;
+	left: 75%;
+}
+
+#drawing-image-one {
+    width: 250px;
+    height: 270px;
+}
+
+#drawing-image-two {
+    width: 215px;
+    height: 270px;
+}
+
+#drawing-image-three {
+    width: 215px;
+    height: 270px;
+}
+
+#drawing-image-four {
+    width: 330px;
+    height: 270px;
+}
+
+#drawing-image-five {
+    width: 430px;
+    height: 450px;
+}
+
+#drawing-image-six {
+    width: 600px;
+    height: 450px;
+}
+
+#drawing-image-seven {
+    width: 530px;
+    height: 375px;
+}
+
+#drawing-image-eight {
+    width: 500px;
+    height: 375px;
+}
+
+#drawing-image-nine {
+    width: 430px;
+    height: 580px;
+}
+
+#drawing-image-ten {
+    width: 600px;
+    height: 580px;
+}
+
+#drawing-image-main {
+    width: 1040px;
+    height: 750px;
+}
+
+#drawing-image-one:hover {
+    width: 450px;
+    height: 500px;
+    margin-top: -400px;
+	margin-left: -200px;
+	top: 75%;
+	left: 75%;
+}
+
+#drawing-image-two:hover {
+    width: 400px;
+    height: 500px;
+    margin-top: -400px;
+	margin-left: -300px;
+	top: 75%;
+	left: 75%;
+}
+
+#drawing-image-three:hover {
+    width: 400px;
+    height: 500px;
+    margin-top: -400px;
+	margin-left: -300px;
+	top: 75%;
+	left: 75%;
+}
+
+#drawing-image-four:hover {
+    width: 500px;
+    height: 400px;
+    margin-top: -300px;
+	margin-left: -400px;
+	top: 75%;
+	left: 75%;
+}
+
+#drawing-image-five:hover {
+    width: 510px;
+    height: 690px;
+    margin-top: -500px;
+	margin-left: -400px;
+	top: 75%;
+	left: 75%;
+}
+
+#drawing-image-six:hover {
+    width: 800px;
+    height: 580px;
+    margin-top: -435px;
+	margin-left: -600px;
+	top: 75%;
+	left: 75%;
+}
+
+#drawing-image-seven:hover {
+    width: 800px;
+    height: 580px;
+    margin-top: -450px;
+	margin-left: -450px;
+	top: 75%;
+	left: 75%;
+}
+
+#drawing-image-eight:hover {
+    width: 800px;
+    height: 580px;
+    margin-top: -450px;
+	margin-left: -650px;
+	top: 75%;
+	left: 75%;
+}
+
+#drawing-image-nine:hover {
+    width: 510px;
+    height: 690px;
+    margin-top: -500px;
+	margin-left: -400px;
+	top: 75%;
+	left: 75%;
+}
+
+#drawing-image-ten:hover {
+    width: 800px;
+    height: 650px;
+    margin-top: -475px;
+	margin-left: -600px;
+	top: 75%;
+	left: 75%;
+}
+
+#drawing-image-main:hover {
+    width: 1040px;
+    height: 750px;
+    margin-top: 0;
+	margin-left: 0;
+	top: 0;
+	left: 0;
+}
+
+p.attribution {
+	font-family: 'Consolas';
+	color: #000;
+	clear: both;
+	text-align: center;
+	line-height: 25px;
+	padding-top: 30px;
+}
+
+p.attribution a {
+	color: #4c8d7c;
+}
+
+/* Responsive hack */
+/* @media only screen and (min-width: 499px) and (max-width: 1212px) {
+	.wrapper {
+		width: 500px;
+	}
+}
+
+@media only screen and (max-width: 498px) {
+	.wrapper {
+		width: 300px;
+	}
+
+	div.gallery ul {
+		list-style-type: none;
+		margin: 0;
+	}
+} */
