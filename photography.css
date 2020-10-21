@@ -48,22 +48,22 @@ body {
       clip-path: polygon(50% 25%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%); }
   
   .one {
-    background-image: url("./edit3.jpg"); }
+    background-image: url("./images/edit3.jpg"); }
   
   .two {
-    background-image: url("./DSC_7078_1.jpg"); }
+    background-image: url("./images/DSC_7078_1.jpg"); }
   
   .three {
-    background-image: url("./DSC_7059.JPG"); }
+    background-image: url("./images/DSC_7059.JPG"); }
   
   .four {
-    background-image: url("./DSC_7081_1.JPG"); }
+    background-image: url("./images/DSC_7081_1.JPG"); }
   
   .five {
-    background-image: url("./DSC_7028.JPG"); }
+    background-image: url("./images/DSC_7028.JPG"); }
   
   .six {
-    background-image: url("./DSC_7076.jpg"); }
+    background-image: url("./images/DSC_7076.jpg"); }
 
 
 .angled-images {
