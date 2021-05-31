@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.knockout-container {
+    width: 100vw;
+    height: 100vh;
+    background: url(./images/_DSC8568.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    --mouse-x: 0px;
+    --mouse-y: 0px;
+}
+
+.clip {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/_DSC8568.JPG);
+    background-size: cover;
+    background-position: var(--mouse-x) var(--mouse-y);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+h1 {
+    font-size: 200px;
+    font-family: 'Orbitron';
+}
