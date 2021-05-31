@@ -9,7 +9,7 @@
 .knockout-container {
     width: 100vw;
     height: 100vh;
-    background: url(./images/_DSC8568.JPG);
+    background: url(./images/fav_painting.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     --mouse-x: 0px;
@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(./images/_DSC8568.JPG);
+    background: url(./images/fav_painting.jpg);
     background-size: cover;
     background-position: var(--mouse-x) var(--mouse-y);
     -webkit-text-fill-color: transparent;
