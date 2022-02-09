@@ -20,14 +20,14 @@ sr.reveal('.animate-left', {
     origin: 'left',
     duration: 1000,
     distance: '25rem',
-    delay: 3000
+    delay: 1500
 });
 
 sr.reveal('.animate-right', {
     origin: 'right',
     duration: 1000,
     distance: '25rem',
-    delay: 3600
+    delay: 900
 });
 
 sr.reveal('.animate-top', {
